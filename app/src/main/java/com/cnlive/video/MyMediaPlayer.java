@@ -5,7 +5,6 @@ import android.content.Context;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
 import android.media.AudioManager;
-import android.net.Uri;
 import android.os.Handler;
 import android.os.Looper;
 import android.text.TextUtils;
@@ -32,7 +31,6 @@ import com.cnlive.video.utils.LightnessControl;
 import com.cnlive.video.utils.PlayerUtils;
 import com.cnlive.video.view.ProgressWheel;
 
-import java.net.URI;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -345,6 +343,7 @@ public class MyMediaPlayer extends FrameLayout implements View.OnClickListener, 
                 mediaplayer.seekTo(video_position);
                 video_position = 0;
             }
+
             // 把得到的总长度和进度条的匹配
             mn_seekBar.setMax((int) mediaplayer.getDuration());
             mn_iv_play_pause.setImageResource(R.drawable.mn_player_pause);
